@@ -1,0 +1,33 @@
+/*
+Problem: Check if an array is sorted in ascending order
+
+Approach:
+- Traverse the array from left to right
+- Compare each element with the next element
+- If any element is greater than the next,
+  the array is not sorted
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
+public class SortedArray {
+
+	
+public static void main(String[] args) {
+int arr[]= {1,2,3,3};
+
+boolean issorted=true;
+
+for(int i=1;i<arr.length;i++) {
+	if(arr[i] < arr[i-1]) {
+		issorted = false;
+	}
+}
+if(issorted) {
+	System.out.println("Array is sorted");
+}
+else {
+	System.out.println("Arraay is not sorted");
+}
+}
+}
